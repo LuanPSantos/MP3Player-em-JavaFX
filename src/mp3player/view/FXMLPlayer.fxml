@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp3player.controller.FXMLPlayerController">
+   <children>
+      <AnchorPane prefHeight="428.0" prefWidth="500.0" style="-fx-background-color: #E7E7E7;">
+         <children>
+            <ImageView fx:id="imageViewImagemMusica" fitHeight="200.0" fitWidth="200.0" layoutX="152.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="148.0">
+               <image>
+                  <Image url="@../../imagens/img3.jpg" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+            <Group layoutX="2.0" layoutY="-30.0">
+               <children>
+                  <Button fx:id="buttonPlayPause" layoutX="209.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#playPauseMusica" prefHeight="81.0" prefWidth="81.0" style="-fx-background-radius: 50%;" text="Play" />
+               </children>
+            </Group>
+            <Slider fx:id="sliderVolumeMusica" blockIncrement="0.1" layoutX="181.0" layoutY="362.0" majorTickUnit="0.1" max="1.0" minorTickCount="0" onMouseClicked="#alterarVolume" showTickMarks="true" snapToTicks="true" value="0.5" AnchorPane.bottomAnchor="20.0" />
+            <Label fx:id="labelNomeMusica" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="229.0" prefHeight="27.0" prefWidth="312.0" text="Nome da música" textAlignment="CENTER" textFill="#333333" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonProximaMusica" layoutX="321.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#proximaMusica" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%;" text="&gt;&gt;|" />
+            <Button fx:id="buttonAnteriorMusica" layoutX="120.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#anteriorMusica" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%;" text="|&lt;&lt;" />
+            <Button fx:id="buttonRepetir" layoutX="400.0" layoutY="288.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchRepetir" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: #FFDCDC;" text="rep" AnchorPane.rightAnchor="60.0" />
+            <Button fx:id="buttonAleatorio" layoutX="60.0" layoutY="287.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchAleatorio" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: #FFDCDC;" text="ran" AnchorPane.leftAnchor="60.0" />
+            <TextField fx:id="textFildCaminho" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="120.0" promptText="C:/exemplo/pasta" />
+            <Button layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#buscarMusicas" prefHeight="25.0" prefWidth="120.0" text="Buscar Músicas" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
